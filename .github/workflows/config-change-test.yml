@@ -135,18 +135,7 @@ jobs:
   test-long-running-docker:
     runs-on: ubuntu-latest
     steps:
-      - name: Harden Runner
-        uses: step-security/harden-runner@rc
-        with:
-          egress-policy: block
-          allowed-endpoints: >
-            archive.ubuntu.com:80
-            auth.docker.io:443
-            github.com:443
-            goreleaser.com:443
-            production.cloudflare.docker.com:443
-            registry-1.docker.io:443
-            security.ubuntu.com:80
+      
             
 
       - run: cat /etc/resolv.conf

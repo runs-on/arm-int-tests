@@ -50,6 +50,7 @@ jobs:
             github.com:443
             goreleaser.com:443
             production.cloudflare.docker.com:443
+            docker-images-prod.6aa30f8b08e16409b46e0173d6de2f56.r2.cloudflarestorage.com:443
             *.docker.io:443
             security.ubuntu.com:80
             
@@ -106,6 +107,7 @@ jobs:
             github.com:443
             goreleaser.com:443
             production.cloudflare.docker.com:443
+            docker-images-prod.6aa30f8b08e16409b46e0173d6de2f56.r2.cloudflarestorage.com:443
             registry-1.docker.io:443
             security.ubuntu.com:80
             
@@ -159,6 +161,7 @@ jobs:
             goreleaser.com:443
             production.cloudflare.docker.com:443
             registry-1.docker.io:443
+            docker-images-prod.6aa30f8b08e16409b46e0173d6de2f56.r2.cloudflarestorage.com:443
             security.ubuntu.com:80
             
 

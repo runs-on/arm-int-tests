@@ -12,7 +12,7 @@ on:
 jobs:
   setup-job:
     name: Setup Job
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@int-sh
@@ -20,7 +20,7 @@ jobs:
           egress-policy: audit
 
       - name: Sleep for 20 seconds
-        run: sleep 20
+        run: sleep 40
 
   generate-jobs:
     name: Generate Jobs

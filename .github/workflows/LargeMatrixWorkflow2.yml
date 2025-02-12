@@ -10,8 +10,21 @@ on:
   pull_request:
 
 jobs:
+  setup-job:
+    name: Setup Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@int-sh
+        with:
+          egress-policy: audit
+
+      - name: Sleep for 20 seconds
+        run: sleep 20
+
   generate-jobs:
     name: Generate Jobs
+    needs: setup-job
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -22,7 +35,6 @@ jobs:
         with:
           egress-policy: audit
 
-      - run: sleep 20
       - name: Checkout code
         uses: actions/checkout@v3
       

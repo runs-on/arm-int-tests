@@ -22,6 +22,27 @@ jobs:
             github.com:443
             goreleaser.com:443
       
+      - name: Print /home/agent directory structure and files
+        run: |
+          echo "Directory structure of /home/agent:"
+          tree /home/agent || ls -R /home/agent  # Use tree if available, fallback to ls
+          
+          echo "Checking for agent.config and agent.log..."
+          
+          if [ -f /home/agent/agent.config ]; then
+            echo "Contents of agent.config:"
+            cat /home/agent/agent.config
+          else
+            echo "agent.config not found."
+          fi
+          
+          if [ -f /home/agent/agent.log ]; then
+            echo "Contents of agent.log:"
+            cat /home/agent/agent.log
+          else
+            echo "agent.log not found."
+          fi
+        shell: bash
       - run: cat /etc/systemd/resolved.conf
       - run: cat /etc/resolv.conf
       - name: Checkout code

@@ -12,7 +12,7 @@ jobs:
     runs-on:
       - runs-on=${{ github.run_id }}
       - runner=2cpu-linux-x64
-      - ami-id=${{ inputs.ami-id }}
+      - ami=${{ inputs.ami-id }}
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@rc
@@ -62,7 +62,7 @@ jobs:
     runs-on:
       - runs-on=${{ github.run_id }}
       - runner=2cpu-linux-x64
-      - ami-id=${{ inputs.ami-id }}
+      - ami=${{ inputs.ami-id }}
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@rc
@@ -105,7 +105,7 @@ jobs:
     runs-on:
       - runs-on=${{ github.run_id }}
       - runner=2cpu-linux-x64
-      - ami-id=${{ inputs.ami-id }}
+      - ami=${{ inputs.ami-id }}
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@rc
@@ -149,7 +149,7 @@ jobs:
     runs-on:
       - runs-on=${{ github.run_id }}
       - runner=2cpu-linux-x64
-      - ami-id=${{ inputs.ami-id }}
+      - ami=${{ inputs.ami-id }}
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@rc
